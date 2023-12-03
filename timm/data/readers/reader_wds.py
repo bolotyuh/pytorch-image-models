@@ -91,7 +91,7 @@ def _parse_split_info(split: str, info: Dict):
         if '::' not in split:
             split_parts = split.split('-', 3)
             split_idx = len(split_parts) - 1
-            if split_idx and 'splits' in info and split_parts[split_idx] in info['splits']:
+            if 'splits' in info and split_parts[split_idx] in info['splits']:
                 split_name = split_parts[split_idx]
 
         split_filenames = expand_urls(split)
